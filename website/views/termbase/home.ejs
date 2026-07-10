@@ -97,6 +97,16 @@
 					</div>
 				<%}%>
 			</div>
+			
+			<%if(!termbaseConfigs.publico.public && termbaseConfigs.publico.becauseBots){%>
+				<div style="clear: both; max-width: 600px; margin: 100px auto; padding: 0px 20px; color: #333333; line-height: 1.75em; font-size: 0.9em">
+					<b style="color: #993333">Termporary lockdown.</b>
+					Public access to all termbases in Terminologue is currently disabled due to high bot traffic.
+					We apologise for this temporary measure while we investigate the situation.
+					Registered users can still access their termbases by logging in.
+				</div>
+			<%}%>
+			
 			<%if(termbaseConfigs.publico.public){%>
 				<div id="randoms">
 					<div class="randomizer" onclick="random()"></div>
