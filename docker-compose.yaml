@@ -8,4 +8,7 @@ services:
       - "80:80"
     volumes:
       - ./data:/app/data
+    environment:
+      BASE_URL: https://terminologue.example.com
+      ADMINS: 'root@localhost,github@reception.sonjaehyuk.me'
     restart: unless-stopped

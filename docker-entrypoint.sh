@@ -22,6 +22,39 @@ if [ ! -f "$data_dir/siteconfig.json" ]; then
     cp "$template_dir/siteconfig.template.json" "$data_dir/siteconfig.json"
 fi
 
+# Override persisted site settings when configured through the environment
+if [ -n "${BASE_URL:-}" ] || [ -n "${ADMINS:-}" ]; then
+    echo "Updating siteconfig from environment"
+    SITECONFIG_PATH="$data_dir/siteconfig.json" node <<'NODE'
+const fs = require("fs");
+
+const configPath = process.env.SITECONFIG_PATH;
+const config = JSON.parse(fs.readFileSync(configPath, "utf8"));
+
+if (process.env.BASE_URL) {
+  const baseUrl = process.env.BASE_URL.trim();
+  if (!baseUrl) {
+    throw new Error("BASE_URL must not be blank");
+  }
+  config.baseUrl = `${baseUrl.replace(/\/+$/, "")}/`;
+}
+
+if (process.env.ADMINS) {
+  const admins = process.env.ADMINS
+    .split(",")
+    .map((admin) => admin.trim())
+    .filter(Boolean);
+
+  if (admins.length === 0) {
+    throw new Error("ADMINS must contain at least one admin");
+  }
+  config.admins = [...new Set(admins)];
+}
+
+fs.writeFileSync(configPath, `${JSON.stringify(config, null, 2)}\n`);
+NODE
+fi
+
 # Only run init.js if .initialized is missing
 if [ ! -f "$data_dir/.initialized" ]; then
     (cd /app/website && node init.js)
