@@ -33,6 +33,7 @@ const localizer={
   eu: require("./localizer/eu.js"),
   zh: require("./localizer/zh.js"),
   fr: require("./localizer/fr.js"),
+  ko: require("./localizer/ko.js"),
 };
 
 //our uploader:

@@ -27,7 +27,8 @@
     {"abbr": "ca", "caption": "català"},
     {"abbr": "eu", "caption": "euskara"},
     {"abbr": "zh", "caption": "正體中文"},
-    {"abbr": "fr", "caption": "français"}
+    {"abbr": "fr", "caption": "français"},
+    {"abbr": "ko", "caption":  "한국어"}
  ],
   "welcome": {
     "en": "<div class='intro'>Welcome to <strong>Terminologue</strong>, a cloud-based, open-source terminology management tool.</div><div class='point'><div class='title'><a href='docs/intro.en/'>Gentle introduction to Terminologue</a></div><div class='blurb'>A short and sweet guided tour of Terminologue for beginners.</div></div><div class='point noblurb'><div class='title'><a href='docs/info.en/'>About Terminologue</a></div></div>",
@@ -49,7 +50,8 @@
     "ca": "<div class='intro'>Et donem la benvinguda a <strong>Terminologue</strong>, una eina de gestió terminològica de codi obert basada en el núvol.</div><div class='point'><div class='title'><a href='docs/intro.ca/'>Introducció senzilla a Terminologue</a></div><div class='blurb'>Un recorregut breu i concís de Terminologue per a principiants.</div></div><div class='point noblurb'><div class='title'><a href='docs/info.ca/'>Sobre Terminologue</a></div></div>",
     "eu": "<div class='intro'>Ongi etorri <strong>Terminologuera</strong>, hodeian oinarritutako kode irekiko terminologia kudeatzeko tresna.</div><div class='point'><div class='title'><a href='docs/intro.eu/'>Terminologuerako sarrera leuna</a></div><div class='blurb'>Hasiberrientzako Terminologueko bisita gidatu labur eta gozoa.</div></div><div class='point noblurb'><div class='title'><a href='docs/info.eu/'>Terminologueri buruz</a></div></div>",
     "zh": "<div class='intro'>歡迎使用<strong>Terminologue</strong>，基於雲端且開源的術語管理工具。</div><div class='point'><div class='title'><a href='docs/intro.zh/'>Terminologue的簡易介紹</a></div><div class='blurb'>新手友善的簡短指南</div></div><div class='point noblurb'><div class='title'><a href='docs/info.zh/'>關於Terminologue</a></div></div>",
-    "fr": "<div class='intro'>Bienvenue dans <strong>Terminologue</strong>, un outil de gestion terminologique à code source libre basé sur l’infonuagique.</div><div class='point'><div class='title'><a href='docs/intro.fr/'>Brève introduction à Terminologue</a></div><div class='blurb'>Une courte présentation de Terminologue conçue pour les débutants.</div></div><div class='point noblurb'><div class='title'><a href='docs/info.fr/'>À propos de Terminologue</a></div></div>"
+    "fr": "<div class='intro'>Bienvenue dans <strong>Terminologue</strong>, un outil de gestion terminologique à code source libre basé sur l’infonuagique.</div><div class='point'><div class='title'><a href='docs/intro.fr/'>Brève introduction à Terminologue</a></div><div class='blurb'>Une courte présentation de Terminologue conçue pour les débutants.</div></div><div class='point noblurb'><div class='title'><a href='docs/info.fr/'>À propos de Terminologue</a></div></div>",
+    "ko": "<div class='intro'><strong>Terminologue</strong>에 오신 걸 환영합니다. <strong>Terminologue</strong>는 오픈소스, 클라우드 기반의 용어집 관리 도구입니다.</div><div class='point'><div class='title'><a href='docs/intro.en/'>Terminologue 입문 가이드</a></div><div class='blurb'>입문자를 위한 짧고 담백한 Terminologue 둘러보기</div></div><div class='point noblurb'><div class='title'><a href='docs/info.en/'>Terminologue에 관하여</a></div></div>"
   },
   "uilangDefault": "en",
   "mailconfig": {"host": "localhost", "port": 465, "secure": false, "from": "noreply@localhost"},
